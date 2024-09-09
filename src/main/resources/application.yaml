@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: faqs
+  datasource:
+    url: jdbc:postgres://localhost:5432/faqsdatabase
+    password: secret
+    username: admin
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-3.5-turbo
+    vectorstore:
+      pgvector:
+        index-type: HNSW
+        distance-type: cosine_distance
+        dimensions: 1536
+  docker:
+    compose:
+      lifecycle-management: start_only
+
+
+
+
