@@ -2,10 +2,7 @@ package ai.bot.faqs.controllers;
 
 import ai.bot.faqs.records.ChatRequest;
 import ai.bot.faqs.services.FaqsService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/ai-bot")
@@ -17,6 +14,7 @@ public class FaqsController {
         this.faqsService = faqsService;
     }
 
+    @CrossOrigin(origins = "http://localhost:5173")
     @PostMapping("/chat")
     public String chatBot(@RequestBody ChatRequest chatRequest) {
         return faqsService.chat(chatRequest);
