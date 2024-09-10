@@ -29,7 +29,7 @@ public class RagDocsLoader {
 
     @PostConstruct
     public void init() {
-        Integer count = jdbcClient.sql("select count(*) from faqs_vector_store")
+        Integer count = jdbcClient.sql("select count(*) from vector_store")
                 .query(Integer.class)
                 .single();
         log.info("Current count of the vector store is: " + count);
