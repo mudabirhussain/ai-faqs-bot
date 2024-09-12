@@ -1,4 +1,4 @@
-# AI-Powered FAQ Bot for E-Commerce
+# AI-Powered FAQ Bot for E-Commerce - Backend
 
 This repository contains an AI-powered bot built to serve an imaginary e-commerce platform by answering Frequently Asked Questions (FAQs). The bot is designed with a specific business purpose in mind: to provide accurate and timely answers to customer queries, enhancing the overall user experience.
 
